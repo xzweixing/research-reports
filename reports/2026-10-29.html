@@ -47,6 +47,19 @@
   table.stocks td{padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
   table.stocks td.num{white-space:nowrap;font-variant-numeric:tabular-nums;}
   .stockcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:8px 18px 12px;margin-bottom:10px;}
+  .holdings{margin-top:34px;background:linear-gradient(180deg,#fffdf7 0%,#ffffff 140px);border:1px solid #f0dcb8;border-radius:14px;padding:4px 22px 20px;}
+  .holdings h2.sec{border-left-color:#d9822b;}
+  .holdings h2.sec .no{color:#d9822b;}
+  .holdings .lead{font-size:13px;color:var(--ink-3);margin:-6px 0 4px;}
+  .hcard{border:1px solid var(--line);border-radius:10px;padding:12px 16px 14px;margin:14px 0;background:#fff;}
+  .hcard h4{font-size:15.5px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px;}
+  .hcard .badge{font-size:12px;font-weight:400;padding:1px 9px;border-radius:999px;background:#eef2fb;color:#3b5aa8;border:1px solid #cfdbf5;}
+  .kv{display:flex;flex-wrap:wrap;gap:4px 18px;font-size:13px;color:var(--ink-2);margin:4px 0 8px;}
+  .kv b{color:var(--ink);}
+  .callout{background:#fffaf0;border-left:4px solid #e0952a;border-radius:8px;padding:10px 14px;font-size:13.5px;color:#6d4b12;margin:10px 0 2px;}
+  .callout b{color:#a8620a;}
+  .thought{margin:10px 0;padding:12px 16px;border-radius:10px;background:#f7f9ff;border:1px solid #dfe7fb;font-size:14px;color:#2c3f7a;}
+  .thought b{color:var(--accent);}
   footer.disc{margin-top:36px;background:#fff;border:1px dashed #c8cedb;border-radius:12px;padding:16px 20px;font-size:13px;color:var(--ink-3);}
   footer.disc b{color:var(--ink-2);}
   @media (max-width:640px){ header.hero{padding:22px 20px;} .wrap{padding:16px 12px 40px;} table.stocks th,table.stocks td{padding:6px 6px;} }
@@ -295,6 +308,74 @@
   </table>
   <div class="watch"><b>跟踪要点：</b>碳酸锂10万关口攻防；储能招投标放量节奏；钨长单落地与口径切换；11月27日镓锗锑对美暂停期节点。</div>
 </div>
+
+<section class="holdings">
+  <h2 class="sec"><span class="no">06</span>我的持仓专区 · 澜起科技 &amp; 宁德时代</h2>
+  <p class="lead">持仓视角：A股为 2026-10-29 收盘数据（15:00）；海外为对应板块最新收盘（美股 10/28 收盘 + 10/29 盘前、韩股 10/29 收盘）。涨红跌绿。</p>
+
+  <div class="hcard">
+    <h4>澜起科技 <span style="font-weight:400;color:var(--ink-3);font-size:13px;">688008 · 科创板</span> <span class="badge">持仓 1000 股 · 成本 210</span></h4>
+    <div class="kv">
+      <span>收盘 <b>166.79 元</b></span>
+      <span>涨跌 <b class="down">-4.53%</b></span>
+      <span>今开/最高/最低 <b>175.00 / 175.00 / 164.39</b></span>
+      <span>成交额 <b>51.1 亿</b></span>
+      <span>换手率 <b>2.65%</b></span>
+      <span>PE(TTM) <b>51.0 倍</b></span>
+      <span>总市值 <b>2036 亿</b></span>
+      <span>持仓盈亏 <b class="down">-20.6%（约 -4.32 万）</b></span>
+    </div>
+    <table class="stocks">
+      <tr><th>市场</th><th>标的</th><th>收盘</th><th>涨跌</th><th>说明</th></tr>
+      <tr><td>A股</td><td>澜起科技 688008</td><td class="num">166.79 元</td><td class="num down">-4.53%</td><td>高开 175 后单边下行，盘中最低 164.39，全天成交 51.1 亿</td></tr>
+      <tr><td>美股</td><td>费城半导体指数 SOX</td><td class="num">—</td><td class="num up">+1.76%</td><td>10/28 收盘，连续三日上涨；半导体是本轮美股反弹主线</td></tr>
+      <tr><td>美股</td><td>美光科技 MU</td><td class="num">983.23 美元</td><td class="num up">+5.87%</td><td>10/28 收盘；10/29 盘前 955.65 美元（<span class="down">-2.80%</span>），高位开始震荡</td></tr>
+      <tr><td>美股</td><td>英伟达 NVDA</td><td class="num">215.38 美元</td><td class="num down">-1.17%</td><td>10/28 收盘；盘前 214.10 美元（<span class="down">-0.59%</span>），AI 算力高位盘整</td></tr>
+      <tr><td>韩股</td><td>SK海力士 000660</td><td class="num">1,526,000 韩元</td><td class="num up">+2.62%</td><td>Q3 营业利润 83.33 万亿韩元创纪录，外资净买入 4483 亿韩元</td></tr>
+      <tr><td>韩股</td><td>三星电子 005930</td><td class="num">232,000 韩元</td><td class="num down">-4.13%</td><td>Q3 净利不及预期 + 股东回报方案不够具体，拖累 KOSPI</td></tr>
+      <tr><td>韩股</td><td>KOSPI 综合指数</td><td class="num">5,937.66</td><td class="num down">-1.24%</td><td>开盘涨 0.6% 后翻绿，盘中一度跌破 6,000 点</td></tr>
+    </table>
+    <div class="callout"><b>一句话看懂：</b>澜起对应的是“海外存储/半导体强、A股映射失效”的分裂局面——SK海力士业绩创纪录、SOX 连涨三日，A股存储链却在杀估值。今天 -4.53% 不是基本面出事，而是<b>三季报前的获利兑现 + 板块贝塔</b>。</div>
+  </div>
+
+  <div class="hcard">
+    <h4>宁德时代 <span style="font-weight:400;color:var(--ink-3);font-size:13px;">300750 · 创业板</span> <span class="badge">全球动力电池龙头</span></h4>
+    <div class="kv">
+      <span>收盘 <b>229.07 元</b></span>
+      <span>涨跌 <b class="flat">-0.03%</b></span>
+      <span>今开/最高/最低 <b>226.86 / 232.11 / 225.45</b></span>
+      <span>成交额 <b>85.8 亿</b></span>
+      <span>换手率 <b>0.88%</b></span>
+      <span>PE(TTM) <b>12.3 倍</b></span>
+      <span>总市值 <b>1.06 万亿</b></span>
+      <span>股息率 <b>3.59%</b></span>
+    </div>
+    <table class="stocks">
+      <tr><th>市场</th><th>标的</th><th>收盘</th><th>涨跌</th><th>说明</th></tr>
+      <tr><td>A股</td><td>宁德时代 300750</td><td class="num">229.07 元</td><td class="num flat">-0.03%</td><td>全天振幅 2.9%，收盘几乎平盘，在外围杀跌中守住 229</td></tr>
+      <tr><td>韩股</td><td>LG新能源 373220</td><td class="num">356,000 韩元</td><td class="num down">-8.60%</td><td>LG Chem 宣布减持 2.5 万亿韩元（约 18.7 亿美元）股份，市场视为新增供给</td></tr>
+      <tr><td>韩股</td><td>SK Innovation 096770</td><td class="num">129,800 韩元</td><td class="num down">-7.09%</td><td>电池子公司 SK On 拖累，板块整体承压</td></tr>
+      <tr><td>韩股</td><td>EcoPro BM 247540</td><td class="num">92,000 韩元</td><td class="num down">-5.64%</td><td>正极材料链被连带抛售，外资与机构同步净卖出</td></tr>
+      <tr><td>韩股</td><td>POSCO Future M 003670</td><td class="num">160,900 韩元</td><td class="num down">-4.74%</td><td>负极/正极材料，跟随电池链下跌</td></tr>
+      <tr><td>韩股</td><td>三星SDI 006400</td><td class="num">538,000 韩元</td><td class="num up">+0.75%</td><td>少数逆势收红的电池股（机构净买入 542 亿韩元）</td></tr>
+      <tr><td>美股</td><td>特斯拉 TSLA</td><td class="num">—</td><td class="num up">+4.04%</td><td>10/28 收盘领涨七巨头，对电池需求端是正面信号</td></tr>
+      <tr><td>A股</td><td>电池板块指数</td><td class="num">15,932.05</td><td class="num down">-2.07%</td><td>板块整体回调，宁德显著抗跌（-0.03% vs -2.07%）</td></tr>
+    </table>
+    <div class="callout"><b>一句话看懂：</b>韩股电池链今天被 <b>LG Chem 减持 LG新能源</b>这一“个体财务事件”砸出 -8.6%，属于股东行为而非行业需求恶化；宁德在 A 股电池板块 -2.07% 的背景下收平，说明<b>筹码结构与估值（12 倍 PE、3.6% 股息）给了它防御性</b>。</div>
+  </div>
+
+  <h3 class="sub">💡 我的想法</h3>
+  <div class="thought">
+    <b>1）澜起：短期是“情绪+筹码”问题，今晚三季报是分水岭。</b>海外存储链（SK海力士创纪录、SOX 连涨三日、美光 5.87%）给的是产业景气答案，但 A 股存储/接口芯片从 7 月以来跌的是估值——51 倍 PE、股价距 52 周高点回撤近半。你的成本 210（浮亏 20.6%）属于被套在“高预期”位置，这时最重要的不是猜涨跌，而是等今晚三季报的三个细节：净利落在盈喜区间上沿还是下沿、互连类芯片毛利率、Q4 指引原话。若落在上沿 + 指引强，反弹到 174~180（缺口/昨收压力区）可先减 200~300 股降低集中度；若数字偏下沿或毛利率走弱，反弹即减，别用“长逻辑”掩盖短期风险。下方 160 是心理关口，跌破且无基本面解释，就该执行纪律。
+  </div>
+  <div class="thought">
+    <b>2）宁德：今天的“平盘”比涨 3% 更有信息量。</b>外围是 LG新能源 -8.6%、SK Innovation -7.1%、EcoPro BM -5.6% 的普跌，A股电池板块 -2.07%，而宁德只 -0.03%——这种相对强度说明：① LG Chem 减持是股东层面套现，不改全球电动车/储能需求曲线；② 宁德 12 倍 PE、3.6% 股息率已进入“类价值股”区间，下跌有人接。它的风险不在估值，而在 11 月排产环比 -5% 的旺季成色，以及碳酸锂跌破 10 万后的价格预期。我的看法是：这只票适合“拿得住”的底仓，跌到 215~220（前平台）反而是可以补的位置，而不是减仓位。
+  </div>
+  <div class="thought">
+    <b>3）组合层面：这两只票其实是一组“进攻 + 防守”的搭配。</b>澜起是 AI 硬件高 beta（涨跌都猛），宁德是低估值制造业龙头（抗跌、有分红）。今天这个组合的表现正好印证：澜起 -4.5% 拖累，宁德 0% 托底，整体回撤被控制住。所以不必因为澜起短期弱就砍掉组合的进攻端，真正要管的是<b>澜起的单票权重</b>——如果它占你总仓位超过三成，那无论看不看好，都该借今晚财报后的反弹把权重降下来；如果只占一成左右，拿住等 Q4 DDR5 逻辑验证更合理。
+  </div>
+  <div class="callout" style="margin-top:14px;"><b>一句话总结：</b>澜起跌的是“预期差”，宁德守的是“估值底”。海外板块告诉你产业没坏，A 股走势告诉你筹码在换手——两者都对，只是时间尺度不同。<b>今晚看澜起财报，明日看电池排产。</b></div>
+</section>
 
 <footer class="disc">
   <b>免责声明：</b>本报告由自动化流程整理生成。板块新闻基于公开网络信息（标题链接指向原始来源，内容未经独立核实，可能存在口径差异或错漏）；个股行情为通达信快照（2026-10-29 11:15左右，盘中数据随时变动）。仅供信息参考，<b>不构成任何投资建议或买卖依据</b>。市场有风险，决策需独立判断。
