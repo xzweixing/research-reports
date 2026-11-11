@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>主题投研报告（盘前）· 2026-11-11（周三）08:30</title>
+<style>
+  :root{
+    --up:#d92b2b; --down:#0a8f4e; --ink:#1f2430; --ink-2:#4a5160; --ink-3:#8a91a0;
+    --line:#e6e9ef; --bg:#f5f6f9; --card:#ffffff; --accent:#2557d6;
+    --tag-exp-bg:#fff4e5; --tag-exp-tx:#b96a00; --tag-exp-bd:#f5c98a;
+    --tag-land-bg:#e8f1ff; --tag-land-tx:#1d4fc0; --tag-land-bd:#b9cdf5;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:"Microsoft YaHei","PingFang SC","Segoe UI",sans-serif;background:var(--bg);color:var(--ink);line-height:1.75;font-size:15px;}
+  .wrap{max-width:960px;margin:0 auto;padding:28px 20px 48px;}
+  header.hero{background:linear-gradient(135deg,#1c2f6e 0%,#2557d6 70%,#3f7bf0 100%);color:#fff;border-radius:14px;padding:30px 34px;margin-bottom:26px;}
+  header.hero h1{font-size:26px;letter-spacing:1px;margin-bottom:8px;}
+  header.hero .meta{font-size:13px;opacity:.92;display:flex;flex-wrap:wrap;gap:14px;}
+  header.hero .meta span{background:rgba(255,255,255,.14);padding:2px 12px;border-radius:999px;}
+  .intro{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:24px;font-size:14px;color:var(--ink-2);}
+  .intro b{color:var(--ink);}
+  h2.sec{display:flex;align-items:center;gap:10px;font-size:19px;margin:30px 0 14px;padding-left:12px;border-left:5px solid var(--accent);}
+  h2.sec .no{color:var(--accent);font-size:15px;font-weight:700;}
+  h3.sub{font-size:15px;margin:18px 0 8px;color:var(--accent);}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:6px 20px;margin-bottom:10px;box-shadow:0 1px 3px rgba(30,40,70,.04);}
+  .item{padding:14px 0;border-bottom:1px dashed var(--line);}
+  .item:last-child{border-bottom:none;}
+  .item .head{display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap;margin-bottom:4px;}
+  .item .title{font-weight:700;font-size:15px;}
+  .item .title a{color:var(--ink);text-decoration:none;border-bottom:1px solid #c3d2f5;}
+  .item .title a:hover{color:var(--accent);}
+  .item .title a::after{content:" ↗";font-size:12px;color:var(--accent);font-weight:400;}
+  .tag{flex:none;font-size:12px;padding:1px 9px;border-radius:999px;border:1px solid;margin-top:2px;white-space:nowrap;}
+  .tag.exp{background:var(--tag-exp-bg);color:var(--tag-exp-tx);border-color:var(--tag-exp-bd);}
+  .tag.land{background:var(--tag-land-bg);color:var(--tag-land-tx);border-color:var(--tag-land-bd);}
+  .item .body{font-size:14px;color:var(--ink-2);}
+  .src{display:block;margin-top:5px;font-size:12px;color:var(--ink-3);}
+  .src a{color:var(--accent);text-decoration:none;}
+  .up{color:var(--up);font-weight:700;}
+  .down{color:var(--down);font-weight:700;}
+  .flat{color:var(--ink-3);font-weight:700;}
+  .watch{margin-top:8px;background:#f0f4ff;border:1px solid #d7e2fb;border-radius:8px;padding:8px 12px;font-size:13px;color:#2c3f7a;}
+  .watch b{color:var(--accent);}
+  table.stocks{width:100%;border-collapse:collapse;font-size:13px;margin:10px 0 4px;}
+  table.stocks th{background:#f0f4ff;color:#2c3f7a;font-weight:600;text-align:left;padding:7px 10px;border-bottom:2px solid #d7e2fb;white-space:nowrap;}
+  table.stocks td{padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+  table.stocks td.num{white-space:nowrap;font-variant-numeric:tabular-nums;}
+  .stockcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:8px 18px 12px;margin-bottom:10px;}
+  .holdings{margin-top:34px;background:linear-gradient(180deg,#fffdf7 0%,#ffffff 140px);border:1px solid #f0dcb8;border-radius:14px;padding:4px 22px 20px;}
+  .holdings h2.sec{border-left-color:#d9822b;}
+  .holdings h2.sec .no{color:#d9822b;}
+  .holdings .lead{font-size:13px;color:var(--ink-3);margin:-6px 0 4px;}
+  .hcard{border:1px solid var(--line);border-radius:10px;padding:12px 16px 14px;margin:14px 0;background:#fff;}
+  .hcard h4{font-size:15.5px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px;}
+  .hcard .badge{font-size:12px;font-weight:400;padding:1px 9px;border-radius:999px;background:#eef2fb;color:#3b5aa8;border:1px solid #cfdbf5;}
+  .kv{display:flex;flex-wrap:wrap;gap:4px 18px;font-size:13px;color:var(--ink-2);margin:4px 0 8px;}
+  .kv b{color:var(--ink);}
+  .callout{background:#fffaf0;border-left:4px solid #e0952a;border-radius:8px;padding:10px 14px;font-size:13.5px;color:#6d4b12;margin:10px 0 2px;}
+  .callout b{color:#a8620a;}
+  .thought{margin:10px 0;padding:12px 16px;border-radius:10px;background:#f7f9ff;border:1px solid #dfe7fb;font-size:14px;color:#2c3f7a;}
+  .thought b{color:var(--accent);}
+  .marketblock{margin-top:34px;background:linear-gradient(180deg,#f7fbff 0%,#ffffff 140px);border:1px solid #d8e4f8;border-radius:14px;padding:4px 22px 20px;}
+  .marketblock .lead{font-size:13px;color:var(--ink-3);margin:-6px 0 4px;}
+  .marketblock h3.sub{margin-top:16px;}
+  footer.disc{margin-top:36px;background:#fff;border:1px dashed #c8cedb;border-radius:12px;padding:16px 20px;font-size:13px;color:var(--ink-3);}
+  footer.disc b{color:var(--ink-2);}
+  @media (max-width:640px){ header.hero{padding:22px 20px;} .wrap{padding:16px 12px 40px;} table.stocks th,table.stocks td{padding:6px 6px;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <h1>主题投研报告（盘前）</h1>
+  <div class="meta">
+    <span>2026-11-11 周三 08:30 发布</span>
+    <span>复盘交易日：2026-11-10（周二）A股/韩股收盘 · 美东 11-10 收盘</span>
+    <span>覆盖：卫星/商业航天 · 存储/AI/半导体 · 机器人/物理AI · 创新药 · 电池/小金属</span>
+    <span>行情口径：全部为已收盘数据（涨红跌绿）</span>
+  </div>
+</header>
+
+<div class="intro">
+  <b>阅读说明</b>：每条新闻 = <b>标题（点击 ↗ 打开原文）</b> + 一句话导读 + <span class="tag land">落地类</span>/<span class="tag exp">预期类</span> 标签 + 信息时间与来源。行情口径：A股与韩股均为 <b>2026-11-10（周二）收盘</b>，美股为 <b>美东 2026-11-10 收盘</b>（今晨凌晨收市）。<b>tdx 行情接口本轮仍不可用</b>，A股个股与指数取自腾讯行情接口 11-10 收盘快照（时间戳 202611101614xx，非盘中），并与上海证券报、央广网收评交叉核对；美股取自同一接口 2026-11-10 16:00 收盘记录；韩股取自韩联社 KOSPI200 收盘清单与首尔经济日报，逐条注明收盘日期，个别标的标注"收盘数据暂缺"。<span class="up">涨红</span> / <span class="down">跌绿</span>。
+</div>
+
+<!-- 未来两周事件日历 -->
+<h2 class="sec"><span class="no">📅</span>未来两周事件日历（2026-11-11 ~ 11-25，延伸至12月关键节点）</h2>
+<div class="card">
+  <table class="stocks">
+    <tr><th>时间</th><th>事件</th><th>关联板块 / 看点</th></tr>
+    <tr><td class="num"><b>11-11 今日</b></td><td>美国10月CPI环比+0.4%、核心+0.3%双双超预期，12月加息25bp已被完全定价、50bp概率升至15.3%；隔夜美股回落。<b>沪指3660第四度考验</b></td><td>全市场 · 外围降温 vs 昨日95涨停0跌停的情绪沸点</td></tr>
+    <tr><td class="num">11-11 起</td><td>稀土等多项出口管制<b>暂停实施期延续至2027-01-10</b>（商务部/海关总署公告口径）</td><td>电池/小金属 · 政策窗口延续，短期不构成供给冲击</td></tr>
+    <tr><td class="num">11-11~15</td><td>中国10月金融数据（社融/新增信贷）待发布；10月CPI同比+0.7%已公布</td><td>全市场流动性</td></tr>
+    <tr><td class="num"><b>11-13（周五）</b></td><td><b>SpaceX 星舰第15次试飞</b>：北京时间 11-14 06:45 开启75分钟窗口，首次尝试飞船+超重型V3助推器同时返回发射场由塔臂捕获，并部署26颗星链V3</td><td>卫星/商业航天 · 本期最重磅海外事件（整箭回收）</td></tr>
+    <tr><td class="num"><b>11-14</b></td><td><b>康方生物依沃西（PD-1/VEGF双抗）FDA 审评结果预计公布</b>——国产自研双抗"海外首考"</td><td>创新药 · 本期最大单品催化</td></tr>
+    <tr><td class="num">11-15</td><td>央行上调外汇存款准备金率 4%→6% 生效（稳汇率信号）</td><td>全市场流动性 · 人民币资产</td></tr>
+    <tr><td class="num"><b>11-17 盘后</b></td><td><b>英伟达 FY2027Q3 财报</b>（北京时间11-18凌晨；此前指引Q3营收1080亿美元、毛利率74%）</td><td>存储/AI/半导体 · 黄仁勋风波后第一份成绩单</td></tr>
+    <tr><td class="num">11-18</td><td>黄仁勋出席美国众议院三个委员会主席发起的<b>闭门简报</b></td><td>存储/AI · 政治风险定价</td></tr>
+    <tr><td class="num"><b>11-18~19</b></td><td><b>APEC 深圳领导人非正式会议</b>（CEO Summit 11-17~18）</td><td>全市场 · 政策与外交催化</td></tr>
+    <tr><td class="num">11-20</td><td>特殊化妆品变更事项分类管理实施（重大变更审评时限90→60个工作日）</td><td>创新药/医美</td></tr>
+    <tr><td class="num">11月下旬</td><td><b>2026医保药品目录 + 商保创新药目录公布</b>（124个目录外药品已完成谈判，2027-01-01执行）</td><td>创新药 · Q4最大行业变量</td></tr>
+    <tr><td class="num">11-26</td><td>辽宁执行第十二批国采中选结果（山西11-30）</td><td>医药 · 仿制药价格体系</td></tr>
+    <tr><td class="num">11-27</td><td>对美镓/锗/锑出口"暂停期"节点倒计时</td><td>电池/小金属 · 出口管制</td></tr>
+    <tr><td class="num">12-14</td><td><b>创业板指编制修订生效</b>（单只样本权重上限逐步降至15%）——宁德时代等高权重样本面临被动调仓</td><td>电池 · 技术性资金流变量</td></tr>
+    <tr><td class="num">12月中旬</td><td><b>12月FOMC</b>（加息25bp已完全定价，50bp概率15.3%；理事沃勒公开呼吁50bp）</td><td>全市场流动性 · 高估值成长股分母端</td></tr>
+  </table>
+</div>
+
+<!-- ① 卫星/商业航天 -->
+<h2 class="sec"><span class="no">①</span>卫星 / 商业航天</h2>
+<div class="card">
+  <h3 class="sub">📰 板块新闻</h3>
+  <div class="item">
+    <div class="head"><span class="tag land">落地类</span><span class="title"><a href="https://news.yunnan.cn/system/2026/11/10/034192675.shtml">央视：我国加速低轨卫星互联网组网，今年已完成80次航天发射、组网任务占比近三分之一</a></span></div>
+    <div class="body">11-09 04:24 长征十二号在海南商业航天发射场成功发射卫星互联网低轨29组卫星（GW星座），"十五五"规划纲要明确"加快低轨卫星互联网组网"，国网+千帆两大万星级星座同步推进——发射频次已被写进五年规划，是本轮商业航天最硬的需求背书。</div>
+    <span class="src">信息时间：2026-11-10 10:20 ｜ 来源：<a href="https://news.yunnan.cn/system/2026/11/10/034192675.shtml">央视网（云南网转载）</a></span>
+  </div>
+  <div class="item">
+    <div class="head"><span class="tag land">落地类</span><span class="title"><a href="https://epaper.cena.com.cn/pc/content/202611/10/content_18751.html">千帆星座在轨卫星达274颗，年底目标324颗——11-03力箭二号首次接入组网发射</a></span></div>
+    <div class="body">垣信卫星通过力箭二号Y2在酒泉东风商业航天创新试验区一箭18星入800km近极地轨道，千帆成为国内首个进入规模化组网的商业低轨宽带星座；2026年已依托长征系列、朱雀二号改进型、引力一号、力箭二号多型火箭实施发射，运力来源多元化。距年底324颗目标还差50颗≈3次一箭18星。</div>
+    <span class="src">信息时间：2026-11-10 ｜ 来源：<a href="https://epaper.cena.com.cn/pc/content/202611/10/content_18751.html">中国电子报</a></span>
+  </div>
+  <div class="item">
+    <div class="head"><span class="tag exp">预期类</span><span class="title"><a href="https://www.21jingji.com/article/20261109/herald/3a1f9ca8de6c102cd880a1d07fb03074.html">星舰第15飞倒计时：首次整箭回收，卫星互联网迎密集催化（北京11-14 06:45）</a></span></div>
+    <div class="body">本次任务的核心变量不在"再飞一次"，而在飞船与超重型V3助推器<b>双双返回发射场由塔臂捕获</b>，成功后将是轨道级发射系统首次完整回收；同时部署26颗星链V3、飞行超22小时。对产业链的意义是"可复用"从单项验证走向整箭闭环，直接改写低轨组网成本曲线。</div>
+    <span class="src">信息时间：2026-11-09 ｜ 来源：<a href="https://www.21jingji.com/article/20261109/herald/3a1f9ca8de6c102cd880a1d07fb03074.html">21世纪经济报道</a> · <a href="https://news.sina.cn/2026-11-08/detail-inixzpas7025603.d.html">新浪（11-08 首发）</a></span>
+  </div>
+  <div class="item">
+    <div class="head"><span class="tag exp">预期类</span><span class="title"><a href="https://finance.eastmoney.com/a/202611103926972547.html">"星云星座计划"发布：全栈国产化太空算力网，卫星在轨直接完成计算</a></span></div>
+    <div class="body">中科院空天信息创新研究院联合产业方发布，改变"单星观测、数据回传地面处理"模式，天基资源按需调用；上游国产算力芯片/服务器、中游卫星制造与组网、下游自然资源/防灾应急/低空经济。太空算力是商业航天与卫星互联网延伸出的新方向，也是本轮板块最强的"新叙事"。</div>
+    <span class="src">信息时间：2026-11-10 ｜ 来源：<a href="https://finance.eastmoney.com/a/202611103926972547.html">东方财富·盘前线索（引央视新闻）</a></span>
+  </div>
+  <div class="item">
+    <div class="head"><span class="tag land">落地类</span><span class="title"><a href="https://www.cnfin.com/gs-lb/detail/20261110/4493286_1.html">2026商业航天论坛：竞争焦点从"发得上去"转向"管得长久"，规模化交付+在轨智能运营</a></span></div>
+    <div class="body">11-09 武汉论坛，航天科技商业火箭公司称面对未来数千吨至万吨级入轨需求，必须走产品标准化、生产批量化、发射节拍化；快舟两型火箭在手订单充足。产业链增量从"单次发射能力"转向发动机、航电、关键结构件、发射回收设施的<b>持续配套需求</b>。</div>
+    <span class="src">信息时间：2026-11-10 ｜ 来源：<a href="https://www.cnfin.com/gs-lb/detail/20261110/4493286_1.html">新华财经</a></span>
+  </div>
+  <div class="item">
+    <div class="head"><span class="tag exp">预期类</span><span class="title"><a href="https://www.163.com/dy/article/LBCG8NH00519DDQ2.html">长三角G60走廊把"卫星互联网+6G+AI+天基计算"放进同一坐标系，2027年培育20家生态主导企业</a></span></div>
+    <div class="body">上海松江以"5G-A规模化应用、6G创新策源"双轮驱动，聚焦"6G+卫星+AI"；上海卫星互联网产业行动方案明确2030年在轨卫星超3000颗、核心产业规模破800亿。区域产业集群化是本轮政策落地的抓手，利好上海本地卫星制造与载荷配套。</div>
+    <span class="src">信息时间：2026-11-10 12:36 ｜ 来源：<a href="https://www.163.com/dy/article/LBCG8NH00519DDQ2.html">第一财经</a></span>
+  </div>
+</div>
+
+<div class="stockcard">
+  <h3 class="sub">📊 板块代表个股（2026-11-10 收盘）</h3>
+  <table class="stocks">
+    <tr><th>代码</th><th>名称</th><th>收盘价</th><th>涨跌幅</th><th>观察</th></tr>
+    <tr><td class="num">600118</td><td>中国卫星</td><td class="num">60.17</td><td class="num up">+4.64%</td><td>成交36.38亿、换手5.16%，PE(TTM)673倍；昨日为板块最强权重，盘中触60.82，卫星互联网指数+2.73%</td></tr>
+    <tr><td class="num">601698</td><td>中国卫通</td><td class="num">22.91</td><td class="num up">+1.15%</td><td>成交6.87亿、换手仅0.70%，PE 287倍；运营商属性、弹性弱于制造端，跟涨为主</td></tr>
+    <tr><td class="num">300045</td><td>华力创通</td><td class="num">14.54</td><td class="num up">+1.75%</td><td>成交7.49亿、换手9.87%（板块最高），PE为负；终端/芯片弹性标的，换手高说明短线资金主导</td></tr>
+  </table>
+  <p style="font-size:12px;color:#8a91a0;margin:2px 0 6px;">注：以上均为 2026-11-10 A股收盘数据（腾讯行情接口收盘快照，时间戳 202611101614xx）。板块层面：商业航天指数 1,668.61（<span class="up">+2.24%</span>）、卫星互联网指数 2,014.25（<span class="up">+2.73%</span>）；涨停股含腾达科技 17.44（+10.03%）、豪能股份 9.55（+10.02%）、钧达股份 48.90（+10.01%）、上海港湾 28.15（+10.00%）、盛洋科技 12.21（+10.00%），海昌新材 20.46（+17.12%）领涨。</p>
+  <div class="watch"><b>跟踪要点</b>：① <b>11-13/北京11-14 06:45 星舰第15飞</b>——整箭回收若成功，是全球发射成本曲线下移的拐点，A股卫星链通常提前1-2个交易日反应，但也存在"利好落地即兑现"的老规律，谨防高开回落；② 千帆年底324颗目标（现274颗）意味着11-12月仍需3次左右一箭18星，发射密度是"预期—落地"验证的唯一硬指标；③ 太空算力/星云星座属于新叙事，缺订单验证，只宜作为情绪弹性而非估值依据；④ 中国卫星PE 673倍、华力创通PE为负——板块当前定价的是"星座组网进度"而非盈利，回调时的支撑来自政策与发射节奏，不来自财报。</div>
+</div>
+
+<!-- ② 存储/AI/半导体 -->
+<h2 class="sec"><span class="no">②</span>存储 / AI / 半导体</h2>
+<div class="card">
+  <h3 class="sub">📰 板块新闻</h3>
+  <div class="item">
+    <div class="head"><span class="tag land">落地类</span><span class="title"><a href="https://caifuhao.eastmoney.com/news/20261110161449347901730">TrendForce：Q4一般型DRAM合约价环比+10~15%、NAND +15~20%，服务器内存仍供不应求</a></span></div>
+    <div class="body">SK海力士Q3服务器DDR5出货量环比增长超40%、DRAM平均售价环比涨近30%，HBM4已全面量产并预计Q4起成为主流产品之一；三星、海力士、美光把投资与产能向HBM/高容量服务器DRAM倾斜，传统消费级DRAM"需求没增长但供给被压缩"也会涨价。扩产难解近渴是本轮存储行情与以往周期最大的不同。</div>
+    <span class="src">信息时间：2026-11-10 16:14 ｜ 来源：<a href="https://caifuhao.eastmoney.com/news/20261110161449347901730">东方财富财富号（引东海证券/国信证券研报）</a></span>
+  </div>
+  <div class="item">
+    <div class="head"><span class="tag land">落地类</span><span class="title"><a href="http://mp.weixin.qq.com/s?__biz=MzIyNzU1MTUzOA==&mid=2247484578&idx=1&sn=ee7bf9825744420ce7edcbe77627454b">DDR4合约价三月涨约24%反超DDR5；原厂口径：三星称短缺2028年见顶、海力士称延续至2030年</a></span></div>
+    <div class="body">10月通用型DDR4 8Gb平均合约价27.5美元（月+5.77%，较2016年统计起点2.9美元累计涨约9.5倍）；Q4 PC DRAM合约价预计再涨13-18%。代际变化才是关键：旧制程产能退出速度>下游改板速度，仍用DDR4的工业/车规项目议价空间被压缩。长鑫9-20已量产第五代DRAM平台，年底计划推4F2架构DDR5 RDIMM。</div>
+    <span class="src">信息时间：2026-11-10 ｜ 来源：<a href="http://mp.weixin.qq.com/s?__biz=MzIyNzU1MTUzOA==&mid=2247484578&idx=1&sn=ee7bf9825744420ce7edcbe77627454b">芯片行业日报（引集邦咨询/证券时报）</a></span>
+  </div>
+  <div class="item">
+    <div class="head"><span class="tag land">落地类</span><span class="title"><a href="http://mp.weixin.qq.com/s?__biz=MzIyNzU1MTUzOA==&mid=2247484578&idx=1&sn=ee7bf9825744420ce7edcbe77627454b">涨价从存储蔓延到被动件与传统芯片：MLCC交期30周→52周、恩智浦第三轮调价2027-1-1生效</a></span></div>
+    <div class="body">三星电机MLCC交期10月跳升至52周（部分渠道61周），AI服务器用高容料号原厂涨幅15-35%；Microchip标准品交期由4-8周拉长至6-32周，订单出货比仍明显>1；村田五年扩产1万亿日元但冈山新线2028年末才投产。逻辑是"AI客户挤占外部制造与封测产能"，同一原厂内部同时出现高价值料号排队、通用料号平稳的分裂状态。</div>
+    <span class="src">信息时间：2026-11-10 ｜ 来源：<a href="http://mp.weixin.qq.com/s?__biz=MzIyNzU1MTUzOA==&mid=2247484578&idx=1&sn=ee7bf9825744420ce7edcbe77627454b">芯片行业日报（引工商时报/首尔经济日报）</a></span>
+  </div>
+  <div class="item">
+    <div class="head"><span class="tag land">落地类</span><span class="title"><a href="https://feng.ifeng.com/c/8xvx5OynhI5">内存涨价打到终端：16GB DDR5合约价从8.70→48美元（+450%），苹果MacBook全线提价、库克称"史无前例"</a></span></div>
+    <div class="body">过去12个月内存合约单价涨幅最高达550%；苹果2026财年Q4电话会上，CEO特努斯直接用"unprecedented"形容内存价格，整体与产品毛利率环比均降约1个百分点，并预告12月季度成本还将进一步上涨、低价库存缓冲逐步减弱。这是"涨价能否传导到终端"的最强实证，也意味着存储厂2027年产能基本售罄。</div>
+    <span class="src">信息时间：2026-11-10 ｜ 来源：<a href="https://feng.ifeng.com/c/8xvx5OynhI5">凤凰网科技</a></span>
+  </div>
+  <div class="item">
+    <div class="head"><span class="tag land">落地类</span><span class="title"><a href="https://www.stcn.com/article/detail/4331031.html">隔夜美股：费半仅跌0.35%但内部分层剧烈——英伟达再跌5.47%、存储走弱，博通+3.91%、台积电+2.05%</a></span></div>
+    <div class="body">11-10 美股三大指数集体收跌（纳指-0.74%、标普-0.38%、道指-0.30%）；费半-0.35%。英伟达两日累跌超9.5%、市值蒸发超4200亿美元（约2.85万亿元）；存储链走弱（海力士ADR-3%、闪迪-2.99%、美光-1.10%）；英特尔、ARM跌逾2%，博通+3.91%、台积电+2.05%、AMD+1.30%、高通+1.20%。<b>芯片内部正按"谁有真实订单"重新分层</b>。</div>
+    <span class="src">信息时间：2026-11-11 08:41 ｜ 来源：<a href="https://www.stcn.com/article/detail/4331031.html">证券时报</a> · <a href="https://www.163.com/dy/article/LBEL6HHN053469RG.html">网易财经（市值口径）</a></span>
+  </div>
+  <div class="item">
+    <div class="head"><span class="tag exp">预期类</span><span class="title"><a href="https://www.163.com/dy/article/LBEL6HHN053469RG.html">11-17盘后英伟达财报 + 11-18众议院闭门简报：黄仁勋风波后的第一份成绩单</a></span></div>
+    <div class="body">董事会已成立由独立董事组成的专项委员会并聘请外部法律顾问，调查期间黄仁勋继续履职；公司此前指引Q3营收1080亿美元、毛利率74%。有科技分析师警告，若黄仁勋被迫离职，英伟达可能面临30%的估值折价。<b>这是未来两周全球半导体定价的最大单一变量</b>，A股算力/存储链的11-18开盘方向基本由它决定。</div>
+    <span class="src">信息时间：2026-11-10~11-11 ｜ 来源：<a href="https://www.163.com/dy/article/LBEL6HHN053469RG.html">证券时报（网易转载）</a></span>
+  </div>
+  <div class="item">
+    <div class="head"><span class="tag land">落地类</span><span class="title"><a href="https://caifuhao.eastmoney.com/news/20261110074702303647020">澜起科技Q4互连类芯片在手订单25.0-27.9亿元（截至10-26），增量主要来自DDR5内存互连</a></span></div>
+    <div class="body">经济参考报11-10梳理存储产业链三季报：澜起Q3单季营收20.79亿（+45.97%）、归母净利12.40亿（+161.98%），双创单季历史新高。公司同时提示，在手订单不代表收入预测或承诺。这是存储链中"订单可验证"的少数环节，也是持仓专区的核心依据。</div>
+    <span class="src">信息时间：2026-11-10 ｜ 来源：<a href="https://caifuhao.eastmoney.com/news/20261110074702303647020">东方财富（引经济参考报）</a></span>
+  </div>
+</div>
+
+<div class="stockcard">
+  <h3 class="sub">📊 板块代表个股（2026-11-10 收盘）</h3>
+  <table class="stocks">
+    <tr><th>代码</th><th>名称</th><th>收盘价</th><th>涨跌幅</th><th>观察</th></tr>
+    <tr><td class="num">688008</td><td>澜起科技</td><td class="num">154.80</td><td class="num up">+3.43%</td><td>成交36.60亿、换手2.05%，PE 49.20；DDR5第五子代RCD 9月量产、Q4订单25.0-27.9亿，逆势强于板块（半导体+2.97%）</td></tr>
+    <tr><td class="num">603986</td><td>兆易创新</td><td class="num">244.57</td><td class="num up">+2.58%</td><td>成交78.46亿（板块最大）、换手4.75%，PE 14.80、总市值1721.70亿；NOR+DRAM双轮，估值最低的存储标的之一</td></tr>
+    <tr><td class="num">301308</td><td>江波龙</td><td class="num">220.93</td><td class="num up">+2.49%</td><td>成交18.72亿、换手2.99%，PE 6.76；模组厂，业绩弹性大但受现货价格波动直接冲击</td></tr>
+    <tr><td class="num">688525</td><td>佰维存储</td><td class="num">130.00</td><td class="num up">+3.66%</td><td>成交21.38亿、换手3.46%，PE 6.45；涨幅居板块前列，三季报净利润创新高</td></tr>
+  </table>
+  <p style="font-size:12px;color:#8a91a0;margin:2px 0 6px;">注：2026-11-10 A股收盘数据。板块层面半导体指数 <span class="up">+2.97%</span>，富瀚微 80.02（<span class="up">+20.01%</span>，成交22.17亿）领涨；半导体材料 +2.51%。隔夜费半 <span class="down">-0.35%</span>（点位未公开披露，标"收盘数据暂缺"）、美光 725.11（<span class="down">-1.10%</span>）、英伟达 168.89（<span class="down">-5.47%</span>）均为美东 11-10 收盘。</p>
+  <div class="watch"><b>跟踪要点</b>：① <b>11-17 NVDA财报</b>是分母端（风险偏好）与分子端（HBM采购）的双重事件，财报前不宜追高、财报后看"存储是否独立于英伟达"——昨日博通+3.91%、台积电+2.05%已给出"去英伟达化"的样本；② 合约价与现货价背离（合约涨、DDR4 16Gb现货微跌0.09%、512Gb TLC wafer连跌两周-4.33%/-9.19%）说明消费端已现抵触，Q4末要警惕"合约价见顶"的预期反转；③ 国产替代是独立主线：长鑫第五代DRAM量产、上海微电子新一代干式光刻机模型亮相进博会，设备/材料/零部件的确定性高于颗粒厂；④ 模组厂（江波龙/佰维）PE仅6-7倍，是"低估值+高弹性"组合，但库存收益反转时跌得也最快，属于波段而非底仓品种。</div>
+</div>
+
+<!-- ③ 机器人/物理AI -->
+<h2 class="sec"><span class="no">③</span>机器人 / 物理AI</h2>
+<div class="card">
+  <h3 class="sub">📰 板块新闻</h3>
+  <div class="item">
+    <div class="head"><span class="tag exp">预期类</span><span class="title"><a href="https://news.qq.com/rain/a/20261110A06DGZ00">马斯克：Optimus可能"出租而非出售"，单台初始成本约3万美元、后续降至2万，全面量产至少还需一年</a></span></div>
+    <div class="body">商业模式首次明确为"租赁优先"，且对外交付前先在特斯拉自有工厂使用（效率约为普通人5倍）；弗里蒙特工厂已启动早期量产，年产能规划100万台。这是"机器人从卖硬件转向卖服务"的关键信号——对供应链意味着订单能见度更长，但对整机厂现金流模型是全新考验。昨日国证机器人产业指数盘中一度涨超4%。</div>
+    <span class="src">信息时间：2026-11-10 10:53 ｜ 来源：<a href="https://news.qq.com/rain/a/20261110A06DGZ00">腾讯新闻（机器人ETF大成）</a></span>
+  </div>
+  <div class="item">
+    <div class="head"><span class="tag land">落地类</span><span class="title"><a href="https://www.163.com/dy/article/LBBASJMJ05394T2H.html">首批6项人形机器人国家标准发布（2027-4-1实施）；工信部：上半年整机超400款、产量超4万台，全年将破10万台</a></span></div>
+    <div class="body">6项标准覆盖总体要求、环境感知、决策规划、运动控制、作业操作、仿真测试平台，填补"度量衡"空白；工信部/财政部同期发布第一批政府采购本国产品标准征求意见稿，固定式多关节工业机器人被纳入。产业侧：2026上半年整机400+款、产量超4万台，300多个重点场景验证部署。</div>
+    <span class="src">信息时间：2026-11-10 ｜ 来源：<a href="https://www.163.com/dy/article/LBBASJMJ05394T2H.html">网易财经（引国新办发布会/全国标准信息平台）</a></span>
+  </div>
+  <div class="item">
+    <div class="head"><span class="tag land">落地类</span><span class="title"><a href="https://finance.sina.com.cn/stock/s/2026-11-10/doc-iniyfzhw2699004.shtml">启元1万台下线：14天从5000→10000台，但机器人业务前三季零收入、公司亏4.22亿</a></span></div>
+    <div class="body">上纬新材11-08公告启元Q1/T1累计下线1万台，产线按汽车节拍2.5分钟/台；11-09封20%涨停报216.02（市值871亿），11-10盘中最高236.00、收218.86（<span class="up">+1.31%</span>，成交35.29亿）。但三季报营收12.09亿（-5.51%）、净利-4.22亿，机器人业务尚未确认收入，研发费用同比增11.8倍至3.84亿。<b>下线≠卖出去</b>，是当前消费级机器人叙事最需要盯的一处裂缝。</div>
+    <span class="src">信息时间：2026-11-10 19:03 ｜ 来源：<a href="https://finance.sina.com.cn/stock/s/2026-11-10/doc-iniyfzhw2699004.shtml">新浪财经（野马财经）</a></span>
+  </div>
+  <div class="item">
+    <div class="head"><span class="tag land">落地类</span><span class="title"><a href="https://news.qq.com/rain/a/20261110A0F1FH00">进博会闭幕：机器人从"炫技"转向"干活"，特斯拉弗里蒙特1月已批量产三代、2026年计划数万台</a></span></div>
+    <div class="body">特斯拉内部人士称得州专用产线主体结构接近完工，机器人将先在得州超级工厂投产前收集软件数据；智元"精灵G2"现场泡茶、宇树对打乒乓球、浙江人形创新中心轮臂式机器人模拟产线分拣搬运。竞争焦点已从舞台转向产线的"稳定作业能力"，百台级部署签约拉开量产序幕。</div>
+    <span class="src">信息时间：2026-11-10 ｜ 来源：<a href="https://news.qq.com/rain/a/20261110A0F1FH00">腾讯新闻（凤凰WEEKLY财经）</a></span>
+  </div>
+  <div class="item">
+    <div class="head"><span class="tag exp">预期类</span><span class="title"><a href="https://www.huxiu.com/article/4904501.html">需求侧三大信号落地：京东五年300万台机器人采购、小米8小时整班作业、苹果HALO真机成功率91%</a></span></div>
+    <div class="body">京东"物理AI加速计划"未来五年采购300万台机器人+100万台无人车+10万架无人机，并建具身智能数据采集中心（两年1000万小时真实场景视频）；小米通用人形机器人在汽车工厂完成8小时整班作业测试（中控台侧盖板排序）；苹果HALO在6个未建图真实环境完成360次测试、平均成功率91%并开源。讨论重心已从"技术路线"转向<b>需求、连续作业、环境适应</b>。</div>
+    <span class="src">信息时间：2026-11-10 ｜ 来源：<a href="https://www.huxiu.com/article/4904501.html">虎嗅</a></span>
+  </div>
+  <div class="item">
+    <div class="head"><span class="tag land">落地类</span><span class="title"><a href="https://finance.sina.com.cn/stock/y/2026-11-11/doc-iniyiiai2034281.shtml">多家连板公司连夜澄清：日盈电子电子皮肤收入不足1万元、华培动力具身产品尚未形成收入、金杯汽车机器人组装营收50万元</a></span></div>
+    <div class="body">11-11 早间公告，日盈电子（2连板）称电子皮肤仍处客户验证及小批量试制阶段；华培动力称具身相关产品可应用于机器人领域但尚未形成业务收入；金杯汽车称机器人组装业务营收50万元、占比极小。<b>这是典型的"题材已跑在基本面前面"的降温信号</b>，昨日10余只人形机器人成分股涨停后的持续性需要打问号。</div>
+    <span class="src">信息时间：2026-11-11 早间 ｜ 来源：<a href="https://finance.sina.com.cn/stock/y/2026-11-11/doc-iniyiiai2034281.shtml">新浪财经·财经早报（公司公告）</a></span>
+  </div>
+</div>
+
+<div class="stockcard">
+  <h3 class="sub">📊 板块代表个股（2026-11-10 收盘）</h3>
+  <table class="stocks">
+    <tr><th>代码</th><th>名称</th><th>收盘价</th><th>涨跌幅</th><th>观察</th></tr>
+    <tr><td class="num">002050</td><td>三花智控</td><td class="num">35.35</td><td class="num up">+3.24%</td><td>成交33.77亿、换手2.57%，PE 38.26、总市值1487.53亿；执行器总成核心供应商，特斯拉链β最纯</td></tr>
+    <tr><td class="num">003021</td><td>兆威机电</td><td class="num">107.00</td><td class="num up">+3.16%</td><td>成交12.19亿、换手5.43%，PE 146.59；灵巧手微传动，弹性大、估值高，盘中最高111.50后回落</td></tr>
+    <tr><td class="num">601689</td><td>拓普集团</td><td class="num">48.42</td><td class="num up">+3.68%</td><td>成交18.58亿、换手2.21%，PE 34.00；汽车零部件+机器人执行器双主线，昨日汽车零部件板块+2.56%</td></tr>
+    <tr><td class="num">002747</td><td>埃斯顿</td><td class="num">30.56</td><td class="num up">+3.91%</td><td>成交22.38亿、换手9.34%（板块最高），PE 142.64；工业机器人本体龙头，国标+政府采购标准双重受益</td></tr>
+  </table>
+  <p style="font-size:12px;color:#8a91a0;margin:2px 0 6px;">注：2026-11-10 A股收盘数据。板块层面：人形机器人概念 <span class="up">+3.70%</span>、机器人概念 <span class="up">+2.92%</span>、减速器 <span class="up">+3.40%</span>、汽车零部件 <span class="up">+2.56%</span>；涨停股含光洋股份 24.17（+10.01%，成交3.83亿）、福莱新材 57.30（+10.00%，成交12.82亿，5天3板）、华培动力/日盈电子/锋龙股份（均2连板）。</p>
+  <div class="watch"><b>跟踪要点</b>：① 板块已从"讲技术"进入"验订单"，<b>11月的关键验证是排产与交付确认收入</b>，而非下线台数——上纬新材"万台零收入"就是最直白的反例；② 国标2027-4-1才实施，短期不构成业绩，但政府采购本国产品标准（工业机器人纳入）是更近的催化；③ 特斯拉链（三花/拓普/兆威）跟随Optimus节奏，租赁模式若落地会拉长供应链订单周期，利好零部件而非整机；④ 昨日多只连板股连夜澄清"收入不足万元"，说明监管与公司都在给题材降温，今日高开是减仓窗口而非加仓窗口。</div>
+</div>
+
+<!-- ④ 创新药 -->
+<h2 class="sec"><span class="no">④</span>创新药</h2>
+<div class="card">
+  <h3 class="sub">📰 板块新闻</h3>
+  <div class="item">
+    <div class="head"><span class="tag land">落地类</span><span class="title"><a href="https://www.cnpharm.com/c/2026-11-10/1110268.shtml">四部门发文打通创新药进院"最后一公里"：两目录内1类新药不计入"一品两规"、不纳入绩效监测</a></span></div>
+    <div class="body">国家卫健委、医保局、中医药局、疾控局11-10联合印发《关于进一步做好创新药安全合理配备使用工作的通知》：不得限制医疗机构总药品品种品规数量；医保谈判目录与商保创新药目录内1类新药不计入"一品两规"、不纳入门诊基药占比与住院次均药费增幅考核；省级以上/地市级医院逐级示范进院。此前卡住创新药放量的三道隐形闸门（品规数、药耗占比、按病种付费超支）本次同时给了政策出口。</div>
+    <span class="src">信息时间：2026-11-10 ｜ 来源：<a href="https://www.cnpharm.com/c/2026-11-10/1110268.shtml">中国食品药品网</a></span>
+  </div>
+  <div class="item">
+    <div class="head"><span class="tag land">落地类</span><span class="title"><a href="https://www.chnfund.com/article/458e021f-5fc2-a5b7-5dbb-3a24d5ed5a21">支付端同步松绑：合理使用医保目录内创新药的病例可自主申报"特例单议"，按月/按季评议</a></span></div>
+    <div class="body">对不适用按病种付费的病例，医疗机构可自主申报特例单议，医保部门简化流程、按月或季度组织专家评议，据结果实行按项目付费或调整支付标准；应用商保创新药目录内药品的病例可不纳入医保按病种支付范围。政策从"配备—培训—支付—管理"四环节闭环，<b>获批到进院的时间差将显著压缩</b>。</div>
+    <span class="src">信息时间：2026-11-10 ｜ 来源：<a href="https://www.chnfund.com/article/458e021f-5fc2-a5b7-5dbb-3a24d5ed5a21">中国基金报</a></span>
+  </div>
+  <div class="item">
+    <div class="head"><span class="tag land">落地类</span><span class="title"><a href="http://mp.weixin.qq.com/s?__biz=MzYzNDQ0NDMyNg==&mid=2247484050&idx=1&sn=1c36a944c792a18054e00be9d58fd619">前三季度中国创新药对外授权约1300亿美元，接近2025年全年；占全球BD交易总额已达49%</a></span></div>
+    <div class="body">国家发改委11-11披露的数据。三大结构性变化确立：① "早交易化"——临床前/IND阶段即出手；② 平台级合作取代单品授权；③ 买方多元化。BD已成为中国创新药的核心变现通道，这也是板块估值锚从"管线DCF"切换到"BD对价"的根本原因。</div>
+    <span class="src">信息时间：2026-11-11 ｜ 来源：<a href="http://mp.weixin.qq.com/s?__biz=MzYzNDQ0NDMyNg==&mid=2247484050&idx=1&sn=1c36a944c792a18054e00be9d58fd619">每日医药要闻（引医药魔方ByDrug/21世纪经济报道）</a></span>
+  </div>
+  <div class="item">
+    <div class="head"><span class="tag exp">预期类</span><span class="title"><a href="http://mp.weixin.qq.com/s?__biz=MzkxMDQ4MDcxMQ==&mid=2247485318&idx=1&sn=f97541df204e3bbd859e82221cdc4c06">康方生物依沃西FDA审评进入最后阶段，结果预计11-14公布——首个国产自研双抗的"海外首考"</a></span></div>
+    <div class="body">HARMONi研究随访延长后西方人群疗效趋势已明显改善，全球十余项III期推进中，多家药企围绕其布局联合用药。若获批，将是首个在美国上市的中国原创双抗，直接改写"中国创新药出海靠授权"的叙事；若收到完整回复函（CRL），HARMONi OS波动的残留疑虑被验证。<b>11-14是本周最重要的单一观察点</b>。</div>
+    <span class="src">信息时间：2026-11-11 06:00 ｜ 来源：<a href="http://mp.weixin.qq.com/s?__biz=MzkxMDQ4MDcxMQ==&mid=2247485318&idx=1&sn=f97541df204e3bbd859e82221cdc4c06">千百药讯（11.10 06:00–11.11 06:00 窗口）</a></span>
+  </div>
+  <div class="item">
+    <div class="head"><span class="tag land">落地类</span><span class="title"><a href="http://mp.weixin.qq.com/s?__biz=MzkxMDQ4MDcxMQ==&mid=2247485318&idx=1&sn=f97541df204e3bbd859e82221cdc4c06">拜耳全球首个FXIa抑制剂阿舒克森获FDA批准；NMPA已于10-26先批（中国快于欧美日）</a></span></div>
+    <div class="body">III期OCEANIC-STROKE（n=12327）显示缺血性卒中风险较安慰剂降低26%（6.2% vs 8.4%），大出血发生率与安慰剂相当（1.6 vs 1.5/100患者年），胃肠道出血略升。卒中二级预防是超级大适应症（全球每年约1200万例卒中、1/5幸存者5年内再发），XIa"抗栓不出血"的逻辑兑现了一半。国内同靶点/同赛道标的（抗凝创新）情绪上受益。</div>
+    <span class="src">信息时间：2026-11-10 ｜ 来源：<a href="http://mp.weixin.qq.com/s?__biz=MzkxMDQ4MDcxMQ==&mid=2247485318&idx=1&sn=f97541df204e3bbd859e82221cdc4c06">千百药讯（引医药魔方/Pharminent）</a></span>
+  </div>
+  <div class="item">
+    <div class="head"><span class="tag land">落地类</span><span class="title"><a href="http://mp.weixin.qq.com/s?__biz=MzYzNDQ0NDMyNg==&mid=2247484050&idx=1&sn=1c36a944c792a18054e00be9d58fd619">荣昌生物引进泛RAS(ON)抑制剂全球权益：首付5000万+里程碑最高48.7亿+销售分成3%-7%</a></span></div>
+    <div class="body">与关联方荣昌制药签约，获得RCZY-690等泛RAS(ON)小分子抑制剂全球独占权益。RAS是经典"不可成药"靶点家族，泛RAS(ON)直击KRAS等突变肿瘤；集团内资产注入也反映创新药企整合管线的新路径。同期：药明康德被美国防部从1260H清单移除（11-09公告），30家A股CXO前三季营收合计+25.48%。</div>
+    <span class="src">信息时间：2026-11-09 盘后 / 11-10 报道 ｜ 来源：<a href="http://mp.weixin.qq.com/s?__biz=MzYzNDQ0NDMyNg==&mid=2247484050&idx=1&sn=1c36a944c792a18054e00be9d58fd619">每日医药要闻（引公司公告/每经）</a></span>
+  </div>
+  <div class="item">
+    <div class="head"><span class="tag exp">预期类</span><span class="title"><a href="http://mp.weixin.qq.com/s?__biz=MzYzNDQ0NDMyNg==&mid=2247484050&idx=1&sn=1c36a944c792a18054e00be9d58fd619">医保双目录11月底发布、2027-1-1施行；124个目录外药品已完成谈判；"30日通道"已跑通</a></span></div>
+    <div class="body">药审中心副主任余欢11-08在虹桥论坛披露：创新药临床审评"30日通道"与"60日默示许可"形成双通道；新版基本医保目录与商保创新药目录预计11月底前发布。叠加11-10四部门进院新政，"批得快、进得去、卖得动"首次在同一年闭环——<b>支付端落地是创新药Q4最大催化</b>。</div>
+    <span class="src">信息时间：2026-11-08 / 11-11 汇总 ｜ 来源：<a href="http://mp.weixin.qq.com/s?__biz=MzYzNDQ0NDMyNg==&mid=2247484050&idx=1&sn=1c36a944c792a18054e00be9d58fd619">每日医药要闻（引中国经济时报/国家医保局）</a></span>
+  </div>
+</div>
+
+<div class="stockcard">
+  <h3 class="sub">📊 板块代表个股（2026-11-10 收盘）</h3>
+  <table class="stocks">
+    <tr><th>代码</th><th>名称</th><th>收盘价</th><th>涨跌幅</th><th>观察</th></tr>
+    <tr><td class="num">600276</td><td>恒瑞医药</td><td class="num">48.55</td><td class="num down">-1.38%</td><td>成交23.07亿、换手仅0.74%，PE 36.27、总市值3222.36亿；进院新政的"最大受益者"却逆势收跌，说明政策已被提前交易</td></tr>
+    <tr><td class="num">688235</td><td>百济神州</td><td class="num">285.45</td><td class="num up">+0.16%</td><td>成交11.88亿、换手3.62%，PE 69.03；盘中最高296.18后回落，振幅5.68%；全球化程度最高，对FDA事件最敏感</td></tr>
+    <tr><td class="num">603259</td><td>药明康德</td><td class="num">150.30</td><td class="num up">+0.01%</td><td>成交65.77亿（板块最大）、换手1.74%，PE 17.23、总市值4561.46亿；1260H清单移出+前三季营收455.37亿居CXO首位</td></tr>
+  </table>
+  <p style="font-size:12px;color:#8a91a0;margin:2px 0 6px;">注：2026-11-10 A股收盘数据。板块层面：医药生物 <span class="up">+0.92%</span>、医药商业 <span class="up">+1.17%</span>、其他医疗服务 <span class="up">+2.93%</span>，但化学制药权重股整体偏弱——政策利好当日未形成板块级行情，属于"政策落地、情绪未接力"的状态。</p>
+  <div class="watch"><b>跟踪要点</b>：① <b>11-14 康方依沃西 FDA</b>是二元事件，获批则整个"出海双抗/ADC"叙事重估，CRL则板块回吐近两周涨幅——事件前不宜满仓押注单一标的；② 11-10 进院新政的射程精确锁定"两目录内1类新药"，因此真正受益的是<b>已进谈判目录的创新药</b>而非所有Biotech，恒瑞当日-1.38%正说明市场在区分"有无目录身份"；③ 11月底医保双目录是Q4最大变量，历史上目录公布前后板块波动率显著抬升；④ CXO与Biotech已分化：药明康德（PE 17倍、清单移出、订单回暖）是"确定性修复"，Biotech是"事件驱动"，两者不应使用同一套仓位纪律。</div>
+</div>
+
+<!-- ⑤ 电池/小金属 -->
+<h2 class="sec"><span class="no">⑤</span>电池 / 小金属（锂、稀土、钨）</h2>
+<div class="card">
+  <h3 class="sub">📰 板块新闻</h3>
+  <div class="item">
+    <div class="head"><span class="tag land">落地类</span><span class="title"><a href="https://www.stcn.com/article/detail/4331097.html">碳酸锂主力11-10收87,100元/吨（-3%），较5月中旬209,840元高点跌近六成</a></span></div>
+    <div class="body">11-04曾触及86,360元的年内低点。下跌三因素：需求不及预期、供给边际持续宽松（澳矿降价+国内产量回升+全球最大锂云母矿审批推进）、外部环境与资金情绪传导。现货端电池级碳酸锂（≥99.5%）11-10报91,300元/吨，年内最高曾达201,250元。电池消费税与出口退税改革把明年需求提前透支到现在，是"旺季不旺"的制度性原因。</div>
+    <span class="src">信息时间：2026-11-11 02:10 ｜ 来源：<a href="https://www.stcn.com/article/detail/4331097.html">证券时报</a> · <a href="https://www.jwview.com/jingwei/html/11-11/696517.shtml">中新经纬（分析师口径）</a></span>
+  </div>
+  <div class="item">
+    <div class="head"><span class="tag exp">预期类</span><span class="title"><a href="https://www.jwview.com/jingwei/html/11-11/696517.shtml">机构分歧：11-12月或"震荡筑底"，关键看枧下窝11月出量能否超3,000吨与12月排产</a></span></div>
+    <div class="body">卓创资讯认为旺季利空已充分消化、年末季节性补库或带来阶段性估值修复；上海钢联称"仍不能断言见底，但继续大幅下跌空间相对有限"——现货库存仍在去化，价格已跌破部分外购锂矿冶炼成本与锂渣提锂成本，供给端存在减产托底。通惠期货提示本轮下跌是"远期宽松预期抢跑+近端强现实退潮"的共振，11月锂电排产环比已转负。</div>
+    <span class="src">信息时间：2026-11-11 ｜ 来源：<a href="https://www.jwview.com/jingwei/html/11-11/696517.shtml">中新经纬（引卓创资讯/上海钢联/通惠期货/混沌天成）</a></span>
+  </div>
+  <div class="item">
+    <div class="head"><span class="tag land">落地类</span><span class="title"><a href="https://cmcc.china-mcc.com/news_show-96-13456.html">钨市高位分化、矿端继续领涨：黑钨精矿65%报37.8万元/吨（+5,000），APT 55万元/吨（+2,000）</a></span></div>
+    <div class="body">上游矿端惜售挺价、现货流通偏紧；中游APT被动跟涨，但钨粉（840元/千克）与钨材报价暂稳，向下传导阻力显现；下游硬质合金对高价接受度有限、采购维持刚需。判断：成本支撑与需求承压博弈，钨价短期高位震荡整理。昨日A股钨板块 <b>+4.73%</b>，是弱市中最亮的资源品主线。</div>
+    <span class="src">信息时间：2026-11-10 ｜ 来源：<a href="https://cmcc.china-mcc.com/news_show-96-13456.html">北方有色网·钨市场日报</a></span>
+  </div>
+  <div class="item">
+    <div class="head"><span class="tag land">落地类</span><span class="title"><a href="https://www.100ppi.com/news/detail-20261110-6474232.html">翔鹭钨业11月上半月报价上调：55%黑钨精矿38.1万元/标吨（+6.42%）、APT 56万元/吨（+7.69%）</a></span></div>
+    <div class="body">较10月下半月分别上调2.3万元/标吨与4万元/吨。头部企业报价对现货市场有强正向指引，生意社多空评分给出钨精矿+1、APT+1.5。这与赣州钨协11月预测价（APT 55万元/吨、黑钨精矿37.5万元/标吨）形成互证，<b>11月钨价中枢确实上移</b>，而非单纯情绪炒作。</div>
+    <span class="src">信息时间：2026-11-10 ｜ 来源：<a href="https://www.100ppi.com/news/detail-20261110-6474232.html">生意社 PriceSeek</a></span>
+  </div>
+  <div class="item">
+    <div class="head"><span class="tag land">落地类</span><span class="title"><a href="https://stock.finance.sina.com.cn/stock/go.php/vReport_Show/kind/search/rptid/847644528638/index.phtml">稀土价格涨跌互现、需求偏弱：氧化镨钕71.13万元/吨（周-0.1%）、氧化镝143.50万（+0.3%）、氧化铽627.50万（-0.9%）</a></span></div>
+    <div class="body">供给端上游氧化物偏紧、金属生产平稳；磁材厂低库存、备货谨慎，金属现货累库、出货承压；需求端磁材厂依托低价长协保供、新询单少，价格下行反而强化悲观预期。研报判断稀土价格偏弱调整，与钨的"矿端挺价"形成鲜明反差——<b>小金属内部已分化，不能一概而论</b>。</div>
+    <span class="src">信息时间：2026-11-10 ｜ 来源：<a href="https://stock.finance.sina.com.cn/stock/go.php/vReport_Show/kind/search/rptid/847644528638/index.phtml">新浪财经·有色金属行业周报</a></span>
+  </div>
+  <div class="item">
+    <div class="head"><span class="tag land">落地类</span><span class="title"><a href="https://www.100ppi.com/data/detail-20261109-1260968.html">生意社基准价：黑钨精矿368,000元/吨、白钨精矿367,000元/吨、APT 540,000元/吨；金属镨96万元/吨（年内+30.61%）</a></span></div>
+    <div class="body">稀土金属端年内涨幅可观（金属镨+30.61%、氧化钕+22.18%、氧化镨+28.76%），但近一周已转平；钨系三个品种报价持稳于高位。这组数据可用于交叉验证：<b>稀土是"年内大涨、当下滞涨"，钨是"当下仍在涨"</b>，两者所处的周期位置不同，操作节奏也应不同。</div>
+    <span class="src">信息时间：2026-11-09（基准价）｜ 来源：<a href="https://www.100ppi.com/data/detail-20261109-1260968.html">生意社·大宗商品价格涨跌榜</a></span>
+  </div>
+</div>
+
+<div class="stockcard">
+  <h3 class="sub">📊 板块代表个股（2026-11-10 收盘）</h3>
+  <table class="stocks">
+    <tr><th>代码</th><th>名称</th><th>收盘价</th><th>涨跌幅</th><th>观察</th></tr>
+    <tr><td class="num">300750</td><td>宁德时代</td><td class="num">249.95</td><td class="num up">+0.53%</td><td>成交80.22亿（较前日109亿明显缩量）、换手0.76%，PE 13.19、总市值11565.81亿；锂价新低下仍收红，成本端受益逻辑占上风</td></tr>
+    <tr><td class="num">600111</td><td>北方稀土</td><td class="num">36.45</td><td class="num up">+0.30%</td><td>成交8.11亿、换手0.62%，PE 30.25；镨钕价格周环比转跌，股价仅微涨，稀土板块 +1.75% 属超跌反弹性质</td></tr>
+    <tr><td class="num">002460</td><td>赣锋锂业</td><td class="num">36.99</td><td class="num down">-0.30%</td><td>成交10.88亿、换手2.43%，PE 11.75；碳酸锂主力-3%却仅小跌，说明锂价利空已大部分计入，36元附近有承接</td></tr>
+    <tr><td class="num">603799</td><td>华友钴业</td><td class="num">32.69</td><td class="num up">+0.06%</td><td>成交8.77亿、换手1.42%，PE 9.98（板块最低）；镍钴一体化，估值已接近历史底部区域</td></tr>
+  </table>
+  <p style="font-size:12px;color:#8a91a0;margin:2px 0 6px;">注：2026-11-10 A股收盘数据。板块层面：钨 <span class="up">+4.73%</span>（中钨高新 40.90 +6.70%，成交32.15亿）、小金属 <span class="up">+1.84%</span>、稀土 <span class="up">+1.75%</span>、电池 <span class="up">+1.39%</span>、能源金属 <span class="up">+0.06%</span>（几乎平盘）。碳酸锂主力合约 11-10 收 87,100 元/吨。</p>
+  <div class="watch"><b>跟踪要点</b>：① 锂的核心矛盾已从"缺口"转为"过剩定价"，<b>枧下窝11月实际出量（能否超3,000吨）</b>是唯一能证伪空头的近端变量，12月排产是第二个；② 钨是本轮小金属里唯一"矿端挺价+报价上调"兑现的品种，但下游硬质合金承接乏力，追高风险随价格上行同步放大；③ 稀土"年内大涨、当下滞跌"——氧化镨钕71万横盘，磁材厂低库存+新询单少，缺的是需求而非价格；④ 宁德这类"锂价下跌受益方"与锂矿股是<b>反向逻辑</b>，同板块内不可同向操作。</div>
+</div>
+
+<!-- 06 持仓专区 -->
+<div class="holdings">
+  <h2 class="sec"><span class="no">06</span>我的持仓专区 · 澜起科技 &amp; 宁德时代</h2>
+  <p class="lead">仅为个人持仓记录与思考，非任何投资建议；行情均为 2026-11-10 已收盘数据。</p>
+
+  <div class="hcard">
+    <h4>澜起科技 688008 <span class="badge">2026-11-10 A股收盘</span><span class="badge">持仓1000股 · 成本210元</span></h4>
+    <div class="kv">
+      <span>收盘 <b class="up">154.80（+3.43%）</b></span>
+      <span>今开 157.00</span>
+      <span>最高 158.20</span>
+      <span>最低 154.00</span>
+      <span>成交额 <b>36.60亿</b></span>
+      <span>换手 2.05%</span>
+      <span>PE(TTM) 49.20</span>
+      <span>总市值 1889.39亿</span>
+      <span>浮动盈亏 <b class="down">-26.29%（约-5.52万）</b></span>
+    </div>
+    <div class="callout"><b>一句话看懂</b>：11-10 收154.80、涨3.43%，全天高开157后回落至154收盘（最高158.20），是"消息面强、盘面弱"的组合——IR记录表确认DDR5第五子代9月量产、Q4互连在手订单25.0-27.9亿，但股价连158.20都没站住，说明155-160一带的套牢盘仍在出货。</div>
+
+    <h3 class="sub">海外对照表（最新收盘）</h3>
+    <table class="stocks">
+      <tr><th>标的</th><th>收盘</th><th>涨跌幅</th><th>交易日</th></tr>
+      <tr><td>费城半导体指数 SOX</td><td class="num">收盘数据暂缺</td><td class="num down">-0.35%</td><td class="num">美东 2026-11-10 收盘（点位未公开披露）</td></tr>
+      <tr><td>美光科技 MU</td><td class="num">725.11 美元</td><td class="num down">-1.10%</td><td class="num">美东 2026-11-10 收盘</td></tr>
+      <tr><td>英伟达 NVDA</td><td class="num">168.89 美元</td><td class="num down">-5.47%</td><td class="num">美东 2026-11-10 收盘（两日累跌超9.5%）</td></tr>
+      <tr><td>SK海力士 000660.KS</td><td class="num">1,212,000 韩元</td><td class="num up">+6.69%</td><td class="num">2026-11-10 韩股收盘（韩联社KOSPI200清单）</td></tr>
+      <tr><td>三星电子 005930.KS</td><td class="num">198,900 韩元</td><td class="num up">+4.74%</td><td class="num">2026-11-10 韩股收盘（韩联社KOSPI200清单）</td></tr>
+      <tr><td>KOSPI 综合指数</td><td class="num">5,239.13</td><td class="num up">+4.39%</td><td class="num">2026-11-10 韩股收盘（盘中触发买入sidecar）</td></tr>
+    </table>
+
+    <h3 class="sub">💭 我的想法</h3>
+    <div class="thought"><b>① 时间差是今天最大的敌人</b>：韩股 11-10 大涨（海力士+6.69%、三星+4.74%）对应的是美股 11-09 的费半+6.85%；而美股 11-10 又转跌（费半-0.35%、英伟达-5.47%、美光-1.10%）。<b>澜起昨天的+3.43%吃的是"上一轮"的钱，今天要面对"下一轮"的逆风</b>。高开是大概率，能否守住要看9:45前后的量能——若成交额半小时不足8亿，视为弱承接。</div>
+    <div class="thought"><b>② 关键价位</b>：上方 <b>158.20（昨日高点）/160</b> 是双重压力位，收复160才算箱体上沿突破，目标看165-170（11-05~11-06密集成交区）；下方 <b>154.00（昨日低点）</b> 是短线防守，失守则回落至150-147.5（本轮低点）。成本210属深套，纪律是<b>绝不在150下方摊平</b>。</div>
+    <div class="thought"><b>③ 事件节点</b>：<b>11-17盘后英伟达财报</b>（指引Q3营收1080亿美元、毛利率74%）是决定性变量——财报前2个交易日不建议加仓；11-18黄仁勋众议院闭门简报是政治风险二次定价；中期看 <b>CXL 3.2 MXC 已获三星/海力士初步验证</b>，在DRAM涨价背景下"复用退役DDR4降低采购成本"的叙事是澜起区别于纯存储股的独特逻辑，这也是我愿意继续持有的核心理由。此外DDR6 RDIMM将配置2颗RCD、MRDIMM"1颗MRCD+10颗MDB"套片价值量远高于RDIMM单颗RCD，价值量提升是长期逻辑。</div>
+    <div class="thought"><b>④ 仓位纪律</b>：1000股对应市值15.48万，浮亏5.52万。<b>若今日冲高至165-170（+6.6%~+9.8%）且量能不足，先减1/3（约330股）把敞口降到10万以内</b>；若11-17财报大超预期并放量站上170，则恢复满仓等DDR5渗透+PCIe 7.0双击；跌破150且英伟达财报利空，则降至半仓保留子弹。核心原则：<b>让仓位服从事件，而不是服从成本</b>。</div>
+  </div>
+
+  <div class="hcard">
+    <h4>宁德时代 300750 <span class="badge">2026-11-10 A股收盘</span><span class="badge">价格/估值分析视角</span></h4>
+    <div class="kv">
+      <span>收盘 <b class="up">249.95（+0.53%）</b></span>
+      <span>今开 253.11</span>
+      <span>最高 253.11</span>
+      <span>最低 247.17</span>
+      <span>成交额 <b>80.22亿</b></span>
+      <span>换手 0.76%</span>
+      <span>PE(TTM) 13.19</span>
+      <span>总市值 11565.81亿</span>
+    </div>
+    <div class="callout"><b>一句话看懂</b>：开盘253.11即为全天最高、随后一路回落到247.17，尾盘拉回249.95收红——<b>典型的"高开低走+尾盘护盘"弱势结构</b>；但成交额从前日109亿缩到80亿，抛压其实在衰减，碳酸锂创年内新低（87,100元）当天股价还能收红，说明"锂价下跌=成本改善"的逻辑开始压过"锂价下跌=需求悲观"。</div>
+
+    <h3 class="sub">海外对照表（最新收盘）</h3>
+    <table class="stocks">
+      <tr><th>标的</th><th>收盘</th><th>涨跌幅</th><th>交易日</th></tr>
+      <tr><td>LG新能源 373220.KS</td><td class="num">330,500 韩元</td><td class="num up">+3.93%</td><td class="num">2026-11-10 韩股收盘（韩联社）</td></tr>
+      <tr><td>SK Innovation 096770.KS</td><td class="num">收盘数据暂缺</td><td class="num flat">—</td><td class="num">2026-11-10（公开渠道未披露收盘价）</td></tr>
+      <tr><td>EcoPro BM 247540.KQ</td><td class="num">收盘数据暂缺</td><td class="num up">+8.70%</td><td class="num">2026-11-10 韩股收盘（首尔经济日报，价格未披露）</td></tr>
+      <tr><td>POSCO Future M 003670.KS</td><td class="num">169,000 韩元</td><td class="num up">+9.95%</td><td class="num">2026-11-10 韩股收盘（韩联社，+15,300韩元）</td></tr>
+      <tr><td>三星SDI 006400.KS</td><td class="num">456,000 韩元</td><td class="num up">+9.88%</td><td class="num">2026-11-10 韩股收盘（韩联社，+41,000韩元）</td></tr>
+      <tr><td>特斯拉 TSLA</td><td class="num">379.78 美元</td><td class="num up">+0.46%</td><td class="num">美东 2026-11-10 收盘</td></tr>
+      <tr><td>A股电池板块指数（中证新能 399808）</td><td class="num">1,993.33</td><td class="num up">+0.30%</td><td class="num">2026-11-10 A股收盘（东财电池板块BK1033 +1.39%）</td></tr>
+    </table>
+
+    <h3 class="sub">💭 我的想法（只做价格估值分析）</h3>
+    <div class="thought"><b>① 价格结构</b>：253.11 开盘即最高、247.17 最低，收 249.95——上影线长、实体小，是"多头无力、空头也未发力"的均衡态。缩量至80亿（前日109亿）是积极信号：<b>下跌不需要成交量了</b>。区间判断：短线 247-253 震荡，有效突破253才开启向 260-270（前期跳空缺口区）的修复。</div>
+    <div class="thought"><b>② 估值位置</b>：PE(TTM) 13.19倍、总市值1.16万亿，仍处近三年低位区。对比韩股同行：三星SDI 单日+9.88%、POSCO Future M +9.95%、EcoPro BM +8.70%——<b>韩国电池材料股涨幅远大于电芯厂（LG新能源+3.93%）</b>，说明全球资金这轮买的是"材料超跌反弹"而非"电芯需求改善"。宁德作为电芯龙头，涨幅（+0.53%）弱于板块指数是合理的，不应期待它跑在最前面。</div>
+    <div class="thought"><b>③ 事件节点</b>：<b>12-14 创业板指权重上限降至15%的修订生效</b>，宁德作为最大权重样本面临被动调仓，历史上类似修订生效前2-3周往往出现"提前卖出、生效即缓和"的结构，可视为可预期的技术性卖压；11月锂电排产环比转负是短期基本面压制；正面变量是枧下窝复产后的自有矿成本下降与年末季节性补库。</div>
+    <div class="thought"><b>④ 与澜起的组合视角</b>：当前"半导体互连（高波动、事件驱动）+ 电池龙头（低估值、周期底部）"的哑铃结构依然成立。今日若澜起随英伟达链高开冲高，宁德可能因资金分流而偏弱——<b>不建议在同一天对两只股票同向加仓</b>；更合理的做法是：澜起冲165+减1/3，把腾出的仓位留到宁德跌破245时再用，形成"高抛低吸"的内部对冲。</div>
+  </div>
+</div>
+
+<!-- 07 大盘回顾 -->
+<div class="marketblock">
+  <h2 class="sec"><span class="no">07</span>大盘回顾 · 2026-11-10（周二）A股收盘</h2>
+  <p class="lead">数据来源：腾讯行情接口 11-10 收盘快照（时间戳 202611101614xx）+ 上海证券报/央广网/同花顺收评交叉核对。</p>
+
+  <h3 class="sub">主要指数</h3>
+  <table class="stocks">
+    <tr><th>指数</th><th>收盘</th><th>涨跌幅</th><th>成交额 / 备注</th></tr>
+    <tr><td>上证指数 000001</td><td class="num">3663.72</td><td class="num up">+0.08%</td><td class="num">6,739.5亿；开3,682.04、高3,683.73、低3,660.72，高开低走仅守住微涨</td></tr>
+    <tr><td>深证成指 399001</td><td class="num">11,241.54</td><td class="num up">+0.86%</td><td class="num">8,308.6亿；开11,313.32、低11,217.01，尾盘拉升</td></tr>
+    <tr><td>创业板指 399006</td><td class="num">2,494.40</td><td class="num up">+1.46%</td><td class="num">4,161.3亿；盘中涨幅一度超2%，全天最强主指数</td></tr>
+    <tr><td>科创50 000688</td><td class="num">1,265.02</td><td class="num up">+0.64%</td><td class="num">660.2亿；高开低走，盘中一度涨超2%后回落</td></tr>
+    <tr><td>北证50 899050</td><td class="num">902.51</td><td class="num up">+0.75%</td><td class="num">121.5亿；重新站上900点</td></tr>
+    <tr><td>沪深300 000300</td><td class="num">4,059.11</td><td class="num up">+0.07%</td><td class="num">3,800.9亿；权重几乎不涨</td></tr>
+    <tr><td>上证50 000016</td><td class="num">2,772.96</td><td class="num down">-0.58%</td><td class="num">995.0亿；<b>唯一下跌的主要宽基</b>，油气/煤炭/保险拖累</td></tr>
+    <tr><td>中证500 000905</td><td class="num">6,645.89</td><td class="num up">+0.91%</td><td class="num">2,540.8亿；中盘强于大盘</td></tr>
+  </table>
+  <div class="kv" style="margin:8px 0;">
+    <span>两市合计成交 <b>约1.49万亿（14,900亿）</b></span>
+    <span>较前一交易日 <b class="up">放量222亿</b></span>
+    <span>沪深北三市合计 <b>15,167亿</b></span>
+    <span>涨跌家数：沪市 <b class="up">1,656涨</b>/<span class="down">622跌</span>/78平；深市 <b class="up">2,379涨</b>/<span class="down">479跌</span>/81平</span>
+    <span>全市场 <b class="up">超4,200只上涨</b>、涨停 <b class="up">95家</b>、<b>跌停清零</b></span>
+  </div>
+
+  <h3 class="sub">涨幅居前板块</h3>
+  <table class="stocks">
+    <tr><th>板块</th><th>涨跌幅</th><th>代表个股（2026-11-10 收盘）</th></tr>
+    <tr><td>影视动漫制作 / 传媒</td><td class="num up">+8.03% / +4.53%</td><td class="num">慈文传媒 9.33 涨停+10.02%（成交9.47亿）、文投控股 2.85 涨停+10.04%（5.13亿，2连板）、风语筑 15.33 涨停+9.97%（12.67亿）</td></tr>
+    <tr><td>短剧互动游戏</td><td class="num up">+5.48%</td><td class="num">文投控股、上海电影（3天2板）、慈文传媒、掌阅科技（涨停）、金逸影视（涨停）、引力传媒（涨停）</td></tr>
+    <tr><td>智能音箱 / 端侧AI</td><td class="num up">+6.11%</td><td class="num">创维数字 12.14 涨停+9.96%（成交5.44亿）、日海智能（4天2板）、瀛通通讯/朝阳科技/亿道信息/国光电器（均涨停）</td></tr>
+    <tr><td>钨</td><td class="num up">+4.73%</td><td class="num">中钨高新 40.90 +6.70%（成交32.15亿，板块最大）、章源钨业/厦门钨业跟涨；黑钨精矿37.8万元/吨（+5,000）</td></tr>
+    <tr><td>人形机器人</td><td class="num up">+3.70%</td><td class="num">光洋股份 24.17 涨停+10.01%（3.83亿）、福莱新材 57.30 涨停+10.00%（12.82亿，5天3板）、锋龙股份/华培动力/日盈电子（2连板）</td></tr>
+    <tr><td>光学元件</td><td class="num up">+3.79%</td><td class="num">联创电子 5.68 涨停+10.08%（2.92亿）、华体科技 18.41 涨停+9.98%（1.53亿）</td></tr>
+    <tr><td>半导体</td><td class="num up">+2.97%</td><td class="num">富瀚微 80.02 涨停+20.01%（成交22.17亿）、清溢光电 13.68 +13.68%；澜起科技 154.80 +3.43%</td></tr>
+    <tr><td>航天装备</td><td class="num up">+3.19%</td><td class="num">电科蓝天 50.00 +9.05%、中国卫星 60.17 +4.64%（成交36.38亿）</td></tr>
+  </table>
+
+  <h3 class="sub">跌幅居前板块</h3>
+  <table class="stocks">
+    <tr><th>板块</th><th>涨跌幅</th><th>代表个股（2026-11-10 收盘）</th></tr>
+    <tr><td>钾肥</td><td class="num down">-2.04%</td><td class="num">藏格矿业 000408 -0.62%（板块4只全跌）</td></tr>
+    <tr><td>民爆制品</td><td class="num down">-2.02%</td><td class="num">金奥博 002917 +2.33%（个股分化，4涨9跌）</td></tr>
+    <tr><td>动力煤 / 煤炭开采</td><td class="num down">-1.80% / -1.56%</td><td class="num">郑州煤电 4.98 +5.29% 逆势（成交10.98亿）、安泰集团 +9.94%；但板块26只下跌、仅1只上涨</td></tr>
+    <tr><td>医美耗材</td><td class="num down">-1.72%</td><td class="num">华熙生物 688363 -0.06%（0涨3跌）</td></tr>
+    <tr><td>油田服务 / 油服工程</td><td class="num down">-1.40% / -1.35%</td><td class="num">中国海油、中曼石油下挫（WTI 11-09 单日-4.38% 至86.85美元的滞后映射）</td></tr>
+    <tr><td>航运 / 航运港口</td><td class="num down">-1.34% / -0.98%</td><td class="num">盛航股份 001205 +0.80%（个股逆势，板块16只下跌）</td></tr>
+    <tr><td>保险</td><td class="num down">-0.70%</td><td class="num">新华保险 +0.12%（权重拖累上证50 -0.58%）</td></tr>
+    <tr><td>石油石化</td><td class="num down">-0.41%</td><td class="num">康普顿 +5.83%（个股强于板块，油价下行压制整体）</td></tr>
+  </table>
+
+  <div class="callout"><b>盘面一句话</b>：指数微涨、个股普涨、权重拖后腿——沪指只涨0.08%但全市场超4,200只上涨、95只涨停且<b>跌停清零</b>，这是典型的"轻指数、重结构"行情：资金从油气/煤炭/保险等高股息方向撤出，涌入AI短剧、端侧AI、人形机器人、钨四条新主线，赚钱效应远好于指数表现。</div>
+
+  <div class="thought"><b>为什么会这样</b>：① <b>外围给了高开、内部没给增量</b>——隔夜费半+6.86%让A股四大指数集体高开（沪指开3,682、创业板盘中涨超2%），但1.49万亿的成交量（仅放量222亿）承接不了高开后的抛压，于是全天走成"高开低走、尾盘拉回"；② <b>权重与题材的跷跷板</b>——上证50 -0.58% 是唯一收跌宽基，油气开采/煤炭开采/港口航运/保险跌幅居前，正是WTI原油11-09暴跌4.38%的滞后映射，资金从"油价受益"切到"AI叙事"；③ <b>涨停结构透露性质</b>——95家涨停里，传媒（慈文/文投/风语筑）、端侧AI（创维/日海/瀛通）、机器人（光洋/福莱）三条线占了大部分，且<b>机器人28只涨停无一只3连板</b>，说明这是"题材轮动、高度受限"的存量博弈，不是新增资金推动的趋势行情；④ <b>今日（11-11）的关键是3660第四考</b>——隔夜美股回落+美国CPI超预期（环比+0.4%、核心+0.3%）+12月加息50bp概率升至15.3%，A股要在"昨日95涨停的情绪沸点"与"外围降温"之间做选择。低开看承接，若放量跌破3,600-3,610则确认平台破位；若能守住3,660并放量至1.6万亿上方，则"政策底+情绪底"共振成立。</div>
+</div>
+
+<footer class="disc">
+  <b>免责声明</b>：本报告为自动化生成的个人研究笔记。所有新闻均来自公开网络来源且<b>未经独立核实</b>，观点仅供复盘参考；所有行情数据为标注日期的<b>收盘快照</b>（A股/韩股为2026-11-10收盘，美股为美东2026-11-10收盘；部分为公开报道转述，个别标的标注"收盘数据暂缺"），可能与交易所最终数据存在差异；本报告<b>不构成任何投资建议</b>，据此操作风险自负。市场有风险，投资需谨慎。
+</footer>
+
+</div>
+</body>
+</html>
